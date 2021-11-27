@@ -26,4 +26,42 @@ idade : 22,
 maiorIdade : true,
 corPredileta : null
 };
-console.log(pessoa );
+console.log(pessoa);
+
+//Array
+
+let familia = [true, 45, 'Thales', 17];
+console.log(familia);
+console.log(familia.length);
+console.log(familia[2]);
+
+let meuAmigo = ['Murilo', 19 , 'Itu'];
+console.log(meuAmigo[0]);
+console.log(meuAmigo[1]);
+console.log(meuAmigo[2]);
+
+//Functions 
+// Verbo + Substantivo
+
+//ex: resetaCor, alterarTamanho
+
+let corSite = "Azul";
+
+//sem parametro
+function resetaCor(){
+    corSite = "";
+};
+
+console.log(corSite);
+resetaCor();
+console.log(corSite);
+
+
+//com parametro
+function resetaCor1(cor){
+    corSite = cor;
+};
+
+console.log(corSite);
+resetaCor1("vermelho");
+console.log(corSite);
