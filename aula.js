@@ -102,17 +102,17 @@ console.log(salario ** salario);
 
 //++ -- 
 
-let idade = 18;
+let idadee = 18;
 
-console.log(idade++); //retorna 18 pois ele está depois da operação 
-console.log(idade);// retorna 19
-console.log(++idade); //retorna 19 pois ele acrescentou antes da operação
+console.log(idadee++); //retorna 18 pois ele está depois da operação 
+console.log(idadee);// retorna 19
+console.log(++idadee); //retorna 19 pois ele acrescentou antes da operação
 
 //O mesmo aconte comm o --
 
-console.log(idade++); //retorna 18 pois ele está depois da operação 
-console.log(idade);// retorna 19
-console.log(++idade); //retorna 19 pois ele acrescentou antes da operação
+console.log(idadee++); //retorna 18 pois ele está depois da operação 
+console.log(idadee);// retorna 19
+console.log(++idadee); //retorna 19 pois ele acrescentou antes da operação
 
 
 //=======================================================================================================================
@@ -146,12 +146,12 @@ console.log(tipo);
 
 console.log(true && true); //retorna true
 
-let maiorIdade = true;
-let possueCarteira = true;
+//let maiorIdade = true;
+//let possueCarteira = true;
 
-let podeAplicar = maiorIdade && possueCarteira;
+//let podeAplicar = maiorIdade && possueCarteira;
 
-console.log(podeAplicar);//True
+//console.log(podeAplicar);//True
 
 //Operador Logico ou (||)
 //Retorna true se um dos operadores forem true
@@ -169,4 +169,31 @@ let candidatoRecusado = !podeAplicar;
 
 console.log('candidato recusado', candidatoRecusado); 
 
-//
+//Fanlsy
+//underfind
+//null
+//0
+//false
+//''
+//NaN - not a nummber
+
+//Truthy
+
+let corPersonalizada = 'Vermelho';
+let corPadrao = 'Azul';
+let corPerfil = corPersonalizada || corPadrao;
+
+console.log(corPerfil); //Vai retornar o primeiro valor truthy
+
+//=========================================
+//Mini projeto
+
+let a = 'Vermelho';
+let b = 'Azul';
+
+let c = a;
+a = b;
+b = c;
+
+console.log(a);
+console.log(b);
