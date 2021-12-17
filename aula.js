@@ -197,3 +197,92 @@ b = c;
 
 console.log(a);
 console.log(b);
+
+//============================================
+//IF e Else
+
+let hora = 10;
+if (hora > 6 && hora <12){
+    console.log('Bom dia!');
+}else if(hora > 12 && hora < 18 ){
+    console.log('Boa tarde');
+}else{
+    console.log('Boa noite!')
+}
+
+//============================================
+//switch case
+
+let permissão = 'comum';
+
+switch(permissão){
+    case 'comum':
+    console.log('usuário comum');
+    break;
+
+    case 'gerente':
+    console.log('usuário gerente');
+    break;
+
+    case 'diretor':
+    console.log('usuário diretor');
+    break;
+
+    default:
+    console.log('Usuário não conhecido!');
+}
+
+//============================================
+//For / while / Do  while / For In / For of
+
+// For 
+
+ for (let i = 1; i <= 5; i++) { //Tbm pode usar (--) 
+     if(i % 2 !== 0){
+        console.log (i);  
+     }
+
+ }
+
+ // While
+ 
+ let i = 5;
+
+ while(i >= 1){
+    if(i % 2 !== 0){
+        console.log (i);  
+    }
+    i--;
+ }
+
+ //Do  while
+
+ let i = 0;
+
+ do{
+     console.log('Digitando', i);
+     i++;
+ }while(i < 10)
+
+ //for in
+
+ const pessoa = {
+    nome: 'Thales',
+    idade: 22
+ };
+for (let chave in pessoa){
+    console.log(chave,pessoa['nome']);
+}
+
+const cores = ['Vermelho', 'Azul', 'Verde'];
+
+for (let indice in cores){
+    console.log(indice,cores[indice]);
+}
+
+
+//For of
+
+for(let cor of cores){
+    console.log(cor);
+}
