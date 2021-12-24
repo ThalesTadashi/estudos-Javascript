@@ -286,3 +286,53 @@ for (let indice in cores){
 for(let cor of cores){
     console.log(cor);
 }
+
+
+//===================================================================
+const resultado = fizzBuzz(15);
+console.log(resultado); 
+
+function fizzBuzz(entrada){
+    if(typeof entrada !== 'number')
+        return 'Não é um numero';
+    if((entrada % 3 === 0) && (entrada % 5 === 0 ))
+        return 'FizzBuzz';
+    if(entrada % 3 === 0)
+        return 'Fizz';
+    if(entrada % 5 === 0)
+        return 'Buzz';
+    return entrada; 
+}
+
+//=============================================
+//Velocidade maxima de 70 km/h
+//a cada 5km acima do limite você ganha 1 ponto
+//Math.Floor()
+//Caso os pontos sejam maior que 12 a carteira é suspensa 
+
+verificarVelocidade(80)
+
+function verificarVelocidade(velocidade){
+    const velMaxima = 70;
+    const limite = 5;
+    if(velocidade <= velMaxima)
+        console.log('Sua velocidade está ok');
+
+    else{
+        const pontos = Math.floor(((velocidade - velMaxima)/limite));
+        if (pontos >=12)
+            console.log('Carteira suspensa');
+        else
+            console.log('Pontos', pontos);  
+    }
+}
+
+//================================================
+exibirTipo(10);
+
+function exibirTipo(vl){
+    if (vl % 2 ===0)
+    console.log('Seu número é PAR')
+    else
+    console.log('Seu número é IMPAR');
+}    
