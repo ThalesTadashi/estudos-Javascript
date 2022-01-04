@@ -364,3 +364,39 @@ function somar(limite){
 
     console.log(totalA = totalB);
 }
+//================================
+//Nota escolar
+//obter a media a partir de um array
+
+// 0 - 59 : F
+//60 - 69 : D
+//70 - 79 : C
+//80 - 89 : D
+//90 - 100: A
+
+const array = [70, 70, 80];
+
+console.log(mediaDoAluno(array));
+
+function mediaDoAluno(notas){
+    let nota1 = array[0];
+    let nota2 = array[1];
+    let nota3 = array[2];
+    let mediaAluninho = ((nota1 + nota2 + nota3) / 3);
+
+    if(mediaAluninho >= 0 && mediaAluninho <= 59 ){
+        console.log('Sua nota é F');
+    }
+    else if(mediaAluninho >= 60 && mediaAluninho <= 69 ){
+        console.log('Sua nota é D');
+    }
+    else if(mediaAluninho >= 70 && mediaAluninho <= 79 ){
+        console.log('Sua nota é C');
+    }
+    else if(mediaAluninho >= 80 && mediaAluninho <= 89 ){
+        console.log('Sua nota é  D');
+    }
+    else if(mediaAluninho >= 90 && mediaAluninho <= 100 ){
+        console.log('Sua nota é  A');
+    }
+}
