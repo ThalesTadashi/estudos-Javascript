@@ -379,24 +379,47 @@ const array = [70, 70, 80];
 console.log(mediaDoAluno(array));
 
 function mediaDoAluno(notas){
-    let nota1 = array[0];
-    let nota2 = array[1];
-    let nota3 = array[2];
-    let mediaAluninho = ((nota1 + nota2 + nota3) / 3);
 
-    if(mediaAluninho >= 0 && mediaAluninho <= 59 ){
-        console.log('Sua nota é F');
+    const media
+
+    if (media < 59) return 'F';
+    if (media < 59) return 'D';
+    if (media < 59) return 'C';
+    if (media < 59) return 'B';
+    return 'A'
+}
+
+function calcularMedia(array){
+    let soma = 0;
+    for(let valor of array){
+        soma += valor;
     }
-    else if(mediaAluninho >= 60 && mediaAluninho <= 69 ){
-        console.log('Sua nota é D');
+    return soma/(array.length);
+}
+
+//==================================
+//Criar uma função que exibe a quantidade de * que a linha possue
+
+exibirAsteriscos(10);
+
+function exibirAsteriscos(linhas){
+    let padrao = '';
+    for (let linha = 1; linha <= linhas; linha++) {
+        padrao += '*'
+        console.log(padrao)
     }
-    else if(mediaAluninho >= 70 && mediaAluninho <= 79 ){
-        console.log('Sua nota é C');
-    }
-    else if(mediaAluninho >= 80 && mediaAluninho <= 89 ){
-        console.log('Sua nota é  D');
-    }
-    else if(mediaAluninho >= 90 && mediaAluninho <= 100 ){
-        console.log('Sua nota é  A');
+}
+
+//===================ou============
+exibirAsteriscos(10);
+
+function exibirAsteriscos(linhas){
+    
+    for (let linha = 1; linha <= linhas; linha++) {
+        let padrao = '';
+        for(let i = 0; i <=linhas; i++){
+            padrao += '*'
+        }
+        console.log(padrao)
     }
 }
