@@ -336,3 +336,31 @@ function exibirTipo(vl){
     else
     console.log('Seu número é IMPAR');
 }    
+//==============================================
+//criar função somar que retorna a soma de todos os multiplos de 3 e 5
+
+//Multiplos de 3
+// 3, 6, 9
+//Multiplos de 5
+//5, 10 
+
+//somando os multiplos 
+//armazenar os multiplos de 3
+//armazenar os multiplos de 5
+//somar os dois
+
+
+somar(10);
+function somar(limite){
+    let totalA;
+    let totalB;
+    
+    for (i=0; i<=limite; i++) {
+        if(i % 3 === 0)
+        totalA += i;
+        if(i % 5 === 0)
+        totalB += i;
+    }
+
+    console.log(totalA = totalB);
+}
