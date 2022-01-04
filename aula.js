@@ -423,3 +423,36 @@ function exibirAsteriscos(linhas){
         console.log(padrao)
     }
 }
+//==========================================
+exibirNummeroPrimos(15);
+
+function exibirNummeroPrimos(limite){
+    for (let numero = 2; numero <=limite; numero++){
+        let ehPrimo = true;
+
+        for(let divisor = 2; divisor < numero; divisor++){
+            if(numero % divisor === 0){
+                ehPrimo = false;
+                break;
+            }
+        }
+
+        if (ehPrimo) console.log(numero);
+    }
+}
+//==================Ou========Tornando mais limpo===========
+exibirNummeroPrimos(15);
+
+function exibirNummeroPrimos(limite){
+    for (let numero = 2; numero <=limite; numero++){
+        if (NumeroPrimo(numero)) console.log(numero);
+    }
+}
+function NumeroPrimo(numero){
+    for(let divisor = 2; divisor < numero; divisor++){
+        if(numero % divisor === 0){
+            return false;   
+        }
+    }
+    return true;
+}
