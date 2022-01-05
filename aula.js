@@ -257,21 +257,21 @@ switch(permissão){
 
  //Do  while
 
- let i = 0;
+ let j = 0;
 
  do{
-     console.log('Digitando', i);
-     i++;
- }while(i < 10)
+     console.log('Digitando', j);
+     j++;
+ }while(j < 10)
 
  //for in
 
- const pessoa = {
+ const pessoaa = {
     nome: 'Thales',
     idade: 22
  };
-for (let chave in pessoa){
-    console.log(chave,pessoa['nome']);
+for (let chave in pessoaa){
+    console.log(chave,pessoaa['nome']);
 }
 
 const cores = ['Vermelho', 'Azul', 'Verde'];
@@ -289,8 +289,8 @@ for(let cor of cores){
 
 
 //===================================================================
-const resultado = fizzBuzz(15);
-console.log(resultado); 
+const resultadoo = fizzBuzz(15);
+console.log(resultadoo); 
 
 function fizzBuzz(entrada){
     if(typeof entrada !== 'number')
@@ -374,18 +374,18 @@ function somar(limite){
 //80 - 89 : D
 //90 - 100: A
 
-const array = [70, 70, 80];
+const array = [90, 90, 80];
 
 console.log(mediaDoAluno(array));
 
 function mediaDoAluno(notas){
 
-    const media
+    const media = calcularMedia(notas);
 
     if (media < 59) return 'F';
-    if (media < 59) return 'D';
-    if (media < 59) return 'C';
-    if (media < 59) return 'B';
+    if (media < 69) return 'D';
+    if (media < 79) return 'C';
+    if (media < 89) return 'B';
     return 'A'
 }
 
@@ -400,28 +400,30 @@ function calcularMedia(array){
 //==================================
 //Criar uma função que exibe a quantidade de * que a linha possue
 
-exibirAsteriscos(10);
+//exibirAsteriscos(10);
 
-function exibirAsteriscos(linhas){
-    let padrao = '';
-    for (let linha = 1; linha <= linhas; linha++) {
-        padrao += '*'
-        console.log(padrao)
-    }
-}
+//function exibirAsteriscos(linhas){
+ //   let padrao = '';
+ //   for (let linha = 1; linha <= linhas; linha++) {
+ //       padrao += '*'
+  //      console.log(padrao)
+ //   }
+//}
 
 //===================ou============
-exibirAsteriscos(10);
+exibirAsteriscos(15);
 
 function exibirAsteriscos(linhas){
     
     for (let linha = 1; linha <= linhas; linha++) {
         let padrao = '';
-        for(let i = 0; i <=linhas; i++){
+        for(let c = 1; c <=linhas; c++){
             padrao += '*'
+            
         }
-        console.log(padrao)
+        console.log(padrao);
     }
+    
 }
 //==========================================
 exibirNummeroPrimos(15);
@@ -458,18 +460,6 @@ function NumeroPrimo(numero){
 }
 
 //Factory Functions
-
-const celular = {
-    marcaCelular : 'Asus',
-    tamanhoCelular : {
-        vertical : 155,
-        horizontal : 75
-    },
-    capacidadeBateria: 5000,
-ligar : function(){
-    console.log('Fazendo ligação...')
-}
-}
 /////////////////////////////////////
 function criarCelular(marcaCelular, tamanhoCelular, capacidadeBateria){
     return{
@@ -477,10 +467,86 @@ function criarCelular(marcaCelular, tamanhoCelular, capacidadeBateria){
             tamanhoCelular : tamanhoCelular,
             capacidadeBateria : capacidadeBateria,
             ligar(){
-            console.log('Fazendo ligação...')
+            console.log('Fazendo ligação...');
         }
     }
 
 }
 const celular1 = criarCelular('Motorola', 5.5, 3000);
 console.log(celular1);
+//============================
+//Pascal case UmDOisTresQuatro
+
+function Celular(marcaCelular, tamanhoTela, capacidadeBateria) {
+    this.marcaCelular = marcaCelular,
+    this.tamanhoTela = tamanhoTela,
+    this.capacidadeBateria = capacidadeBateria,
+    this.ligar = function(){
+        console.log("Fazendo ligação....");
+    }
+        
+}
+const celular = new Celular('Asus', 8 , 4000);
+console.log(celular);
+
+//Natureza dinamica de objetos
+
+const mouse = {
+    cor : 'red',
+    marca : 'LOG'
+}
+
+mouse.velocidade1 = 2000;
+mouse.trocarDPI = function(){
+    console.log('mudando DPI');
+}
+delete mouse.velocidade;
+delete mouse.trocarDPI;
+console.log(mouse);
+
+//==========================
+//Clonando objetos
+const celularr = {
+    marcaCelular:'ASUS',
+    tamanhoTela: {
+        vertical: 155,
+        horizontal: 75
+    },
+    ligar : function(){
+        console.log('Fazendo Ligação....');
+    }
+}
+
+const novoObjeto = Object.assign({bateria: 5000},celularr);
+console.log(novoObjeto);
+
+//Outra forma de clonar==============
+const objeto2 = {...celular};
+console.log(objeto2);
+
+//Metodo Math
+
+Math.random();
+Math.max(3,6,8,10);
+Math.min(5,9,2,15);
+
+//String
+
+//Tipo primitivo
+const mensagemm = 'a vida é bela';
+
+//Tipo objeto
+const outraMensagem = new String ('bom dia');
+
+outraMensagem.length;
+outraMensagem[2];
+mensagemm.includes('a');
+mensagemm.includes('minnha');
+mensagemm.startsWith('verde');
+mensagemm.endsWith('bela');
+mensagemm.indexOf('vida');
+mensagemm.replace('a','O');
+mensagemm.trim();
+mensagemm.split(' ');
+
+console.log(mensagemm);
