@@ -456,3 +456,31 @@ function NumeroPrimo(numero){
     }
     return true;
 }
+
+//Factory Functions
+
+const celular = {
+    marcaCelular : 'Asus',
+    tamanhoCelular : {
+        vertical : 155,
+        horizontal : 75
+    },
+    capacidadeBateria: 5000,
+ligar : function(){
+    console.log('Fazendo ligação...')
+}
+}
+/////////////////////////////////////
+function criarCelular(marcaCelular, tamanhoCelular, capacidadeBateria){
+    return{
+            marcaCelular : marcaCelular,
+            tamanhoCelular : tamanhoCelular,
+            capacidadeBateria : capacidadeBateria,
+            ligar(){
+            console.log('Fazendo ligação...')
+        }
+    }
+
+}
+const celular1 = criarCelular('Motorola', 5.5, 3000);
+console.log(celular1);
