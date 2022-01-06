@@ -550,3 +550,60 @@ mensagemm.trim();
 mensagemm.split(' ');
 
 console.log(mensagemm);
+
+//===================================
+//template literal
+const mensagem1 = 'Oi, isso é \n minha mensagem';
+
+//object {}
+//Boolean true, false
+//String '' "";
+//template ``
+
+const outra = `Oi isso é minha 'primeira' mensagem`;
+
+const nome1 = 'Thales';
+
+const email = 
+`Olá Sr.${nome1} ${2+3}
+
+Obrigado por ver meu codigo
+
+att,
+
+Thales`;
+
+console.log(email);
+//====================================
+//Date
+
+const data1 = new Date();
+const data2 = new Date('March 06 2022 09:10');
+const data3 = new Date(2019,00,06,9,30);
+
+data3.setFullYear(2030);
+console.log(data3);
+
+data2.toDateString(); //trasforma a data em string
+data2.toTimeString(); //trasforma a tempo em string
+data2.toISOString(); //trasforma em formato para banco de dados
+
+//=====================================
+//Criar objeto endereço que contem
+//Rua
+//Cidade
+//Cep
+//exibirEndereço(endereco)
+
+let endereco = {
+    rua: 'a',
+    cidade: 'b',
+    cep: 'c'
+};
+
+function exibirEndereco(endereco){
+    for (let chave in endereco)
+    console.log(chave,endereco[chave]);
+}
+
+exibirEndereco(endereco);
