@@ -658,3 +658,102 @@ let postagem  = {
 }
 
 console.log(postagem);
+
+//Criar um objeto postagem
+//Titulo, mmensagem, autor, visualizações, comentarios, estaaovivo
+
+function Postagem(titulo, mensagem, autor){
+
+    this.titulo = titulo,
+    this.mensagem = mensagem,
+    this.autor = autor,
+    this.visualizacoes = 0,
+    this.cometarios = [],
+    this.estaAoVivo =false
+}
+
+let postagem2 = new Postagem('a','b','c');
+console.log(postagem2);
+
+//Faixa de preco
+//Criar array de objetos de faixa de preco para que ela possa ser usada em um site igual o mercado  livre
+//faixa, tooltip, min e max
+
+//Primeira opção
+
+let faixas = [
+    {tooltip: 'até R$700', minimo: 0, maximo: 700},
+    {tooltip: 'de R$700 a R$1000', minimo: 700, maximo: 1000},
+    {tooltip: 'de R$1000 para mais', minimo: 1000, maximo: 10000},
+];
+
+//==============Ou
+//Factory function
+
+function criaFaixaPreco(tooltip,minimo,maximo){
+    return{
+        tooltip,
+        minimo,
+        maximo
+    }
+}
+
+let faixas2 = [
+    criaFaixaPreco('de 1 a 100',1,100),
+    criaFaixaPreco('de 100 a 1000',100,1000),
+    criaFaixaPreco('de 1000 a 10000',1000,10000),
+];
+
+
+
+//terceira opção
+//Constructor function
+
+function FaixaPreco(tooltip,minimo,maximo){
+    this.tooltip = tooltip,
+    this.minimo = minimo,
+    this.maximo = maximo   
+}
+
+let faixas3 = [
+    new FaixaPreco('de 10 a 20',10,20),
+    new FaixaPreco('de 20 a 30',20,30),
+    new FaixaPreco('de 30 a 4000',30,4000)
+];
+
+console.log(faixas);
+console.log(faixas2);
+console.log(faixas3);
+
+//============================
+//Arrays
+//Add novos elementos
+//Encontrar elementos
+//Remover elementos
+//Dividir elementos 
+//Dividir Arrays
+//Combinar Arrays
+
+const numbers = [1,2,3];
+
+//Inicio
+numbers.unshift(0) //coloca o valor no inicio
+console.log(numbers);
+//meio
+numbers.splice(1,0,'a')//(indice, deletar_indice,valor a ser colocado)
+console.log(numbers);
+//final
+numbers.push(5)
+console.log(numbers);
+
+//================
+//Encontrar elementos(primitivos)
+
+const numbers2 = [1,2,3,1,4];
+
+console.log(numbers2.indexOf(2));
+console.log(numbers2.indexOf(5));//retorna -1 pois não existe numero 5 no array, da mesma forma se fosse uma string
+
+console.log(numbers2.lastIndexOf(1));//busca a ultima ocorrecia
+
+console.log(numbers2.includes(2))//retorna se existe o numero  
