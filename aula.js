@@ -624,6 +624,8 @@ function saoIguais(enderecos1, enderecos2){
 
     return enderecos1.rua === enderecos2.rua && enderecos1.cidade === enderecos2.cidade && enderecos1.cep === enderecos2.cep
 }
+console.log(saoIguais(enderecos1, enderecos2));
+
 function temEnderecoMemoriaIguais(enderecos1, enderecos2){
     //comparar se a referencia do objeto aponta para o mesmolocal da memoria
 
@@ -631,3 +633,28 @@ function temEnderecoMemoriaIguais(enderecos1, enderecos2){
 }
 
 console.log(temEnderecoMemoriaIguais(enderecos1, enderecos2));
+
+//=================================
+//Crie um objeto de postagem do blog que vai conter as seguintes postagens 
+
+//titulo
+//mensagem
+//autor
+//visualizações
+//cometarios
+//      (autor, mensagem)
+//estaAoVivo
+
+let postagem  = {
+    titulo :   'a',
+    mensagem : 'b',
+    autor :    'c',
+    visualizações : 10,
+    cometarios : [
+        {autor : 'a',  mensagem : 'b'},
+        {autor : 'a',  mensagem : 'b'}
+    ],
+    estaAoVivo : true
+}
+
+console.log(postagem);
