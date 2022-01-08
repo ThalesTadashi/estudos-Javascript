@@ -609,3 +609,25 @@ function exibirEndereco(endereco){
 exibirEndereco(endereco);
 
 //==========================================
+//Igualdade de Objetos
+
+function enderecos(rua,cidade,cep){
+    this.rua = rua,
+    this.cidade = cidade,
+    this.cep = cep
+}
+const enderecos1 = new enderecos('a','b','c');
+const enderecos2 = new enderecos('a','b','c');
+
+function saoIguais(enderecos1, enderecos2){
+    //comparar se as propriedades sao iguais
+
+    return enderecos1.rua === enderecos2.rua && enderecos1.cidade === enderecos2.cidade && enderecos1.cep === enderecos2.cep
+}
+function temEnderecoMemoriaIguais(enderecos1, enderecos2){
+    //comparar se a referencia do objeto aponta para o mesmolocal da memoria
+
+    return enderecos1 === enderecos2;
+}
+
+console.log(temEnderecoMemoriaIguais(enderecos1, enderecos2));
