@@ -739,9 +739,11 @@ const numbers = [1,2,3];
 //Inicio
 numbers.unshift(0) //coloca o valor no inicio
 console.log(numbers);
+
 //meio
 numbers.splice(1,0,'a')//(indice, deletar_indice,valor a ser colocado)
 console.log(numbers);
+
 //final
 numbers.push(5)
 console.log(numbers);
@@ -757,3 +759,70 @@ console.log(numbers2.indexOf(5));//retorna -1 pois não existe numero 5 no array
 console.log(numbers2.lastIndexOf(1));//busca a ultima ocorrecia
 
 console.log(numbers2.includes(2))//retorna se existe o numero  
+
+//==================================
+//Encontrar elementos(referencia)
+
+const marcas = [
+    {id:1 , nome:'abacate'},
+    {id:2 , nome:'banana'},
+];
+
+const marca = marcas.find(function(marca){
+    return marca.nome === 'abacate';
+});
+
+console.log(marca);
+
+
+//=================================
+//Arrow Functions
+
+const frutas = [
+    {id:1 , nome:'abacate'},
+    {id:2 , nome:'banana'},
+];
+
+console.log(frutas.find((fruta) => fruta.nome === 'banana'));
+
+//==========================
+//Removendo elementos
+
+const numbers3 = [1,2,3,4,5,6];
+
+//final
+const ultimo = numbers3.pop();//remove no final
+console.log(ultimo);
+console.log(numbers3);
+
+//Inicio
+const primeiro = numbers3.shift();//remove no inicio
+console.log(primeiro);
+console.log(numbers3);
+
+//
+const meio = numbers3.splice(2,2);
+console.log(meio);
+console.log(numbers3);
+
+//Esvaziando arrays
+
+let numbers4 = [1,2,3,4,5,6];
+let outros = numbers4;
+//solução 1 //não apaga todas as referencias , o array ainda esta em outros
+//numbers4 =[];
+//console.log(outros);
+
+//solução 2
+numbers4.length = 0;
+console.log(numbers4);
+console.log(outros);
+
+//solução 3
+//numbers4.splice(0,numbers4.length)
+//console.log(numbers4);
+//console.log(outros);
+
+//solução 4 
+//while (numbers4.length > 0)
+//    numbers4.pop();
