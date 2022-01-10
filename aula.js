@@ -826,3 +826,15 @@ console.log(outros);
 //solução 4 
 //while (numbers4.length > 0)
 //    numbers4.pop();
+
+//Combinando e cortando arrays
+const primeiro1 = [1,2,3];
+const segundo1 = [4,5,6];
+
+//Combinar
+const combinado = primeiro1.concat(segundo1);
+console.log(combinado);
+
+//Dividir
+const cortado = combinado.splice(1,3);
+console.log(cortado);
