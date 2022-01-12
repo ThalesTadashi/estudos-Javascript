@@ -838,3 +838,48 @@ console.log(combinado);
 //Dividir
 const cortado = combinado.splice(1,3);
 console.log(cortado);
+
+
+//Operador spread
+
+const combinado1 = [...primeiro1,'a',...segundo1,'$'];
+console.log(combinado1);
+
+const clonado = [...combinado1];
+console.log(clonado);
+
+//Intwrando um Array
+
+const numbers5 = [1,2,3,4,5];
+
+//forEach
+
+numbers5.forEach((numbers5,indice) => console.log(numbers5,indice));
+
+//Combinar arrays
+const numbers6 = [1,2,3,4,5];
+
+const combinado3 = numbers6.join('.')
+console.log(combinado3);
+
+const frase1 = 'Ola, eu sou o Thales';
+const resultado1 = frase1.split(' ');
+console.log(resultado1);
+
+console.log(resultado1.join('-'));
+
+//Colhendo dados do usuario
+
+let corFav = prompt('Qual sua cor favorita?');
+
+if(corFav == 'roxo'){
+    alert('É a minha cor favorita também')
+}
+
+//Mini desafio 
+let maiorIdade1 = prompt('Qual a sua idade?');
+
+if(maiorIdade1 >= 18){
+    alert('Você já é maior')
+}
+    alert('Você não pode acessar esse site');
